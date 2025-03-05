@@ -114,11 +114,54 @@
         <section class="news">
             <div class="container">
                 <h2>Actualités et Événements</h2>
-                <div class="news-grid">
-                    <!-- News items will be loaded dynamically -->
+                <div class="news-filter">
+                    <button class="filter-btn active" data-filter="all">Tout</button>
+                    <button class="filter-btn" data-filter="news">Actualités</button>
+                    <button class="filter-btn" data-filter="events">Événements</button>
+                    <button class="filter-btn" data-filter="press">Communiqués</button>
                 </div>
-                <div class="center">
-                    <a href="/news" class="btn primary">Voir toutes les actualités</a>
+                <div class="news-grid">
+                    <article class="news-card" data-category="news">
+                        <div class="news-image">
+                            <img src="images/news/campaign.jpg" alt="Campagne de distribution">
+                            <span class="news-tag">Actualité</span>
+                            <span class="news-date">5 Mars 2025</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Distribution Nationale de Moustiquaires</h3>
+                            <p>Lancement de la campagne nationale de distribution de moustiquaires imprégnées dans les régions prioritaires.</p>
+                            <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="events">
+                        <div class="news-image">
+                            <img src="images/news/workshop.jpg" alt="Atelier de formation">
+                            <span class="news-tag">Événement</span>
+                            <span class="news-date">10 Mars 2025</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Atelier de Formation des Agents de Santé</h3>
+                            <p>Formation intensive sur les nouvelles techniques de dépistage et de traitement du paludisme.</p>
+                            <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="press">
+                        <div class="news-image">
+                            <img src="images/news/report.jpg" alt="Rapport annuel">
+                            <span class="news-tag">Communiqué</span>
+                            <span class="news-date">1 Mars 2025</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Rapport Annuel 2024</h3>
+                            <p>Publication du rapport annuel sur les progrès de la lutte contre le paludisme au Sénégal.</p>
+                            <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="news-pagination">
+                    <button class="load-more">Voir plus d'actualités <i class="fas fa-plus"></i></button>
                 </div>
             </div>
         </section>
@@ -126,11 +169,104 @@
         <section class="partners">
             <div class="container">
                 <h2>Nos Partenaires</h2>
+                <p class="section-description">Ensemble pour un Sénégal sans paludisme</p>
+                
+                <div class="partners-categories">
+                    <button class="partner-category active" data-category="all">Tous</button>
+                    <button class="partner-category" data-category="international">Organisations Internationales</button>
+                    <button class="partner-category" data-category="government">Gouvernementaux</button>
+                    <button class="partner-category" data-category="ngo">ONG</button>
+                </div>
+
                 <div class="partners-grid">
-                    <img src="images/who-logo.png" alt="WHO Logo">
-                    <img src="images/unicef-logo.png" alt="UNICEF Logo">
-                    <img src="images/usaid-logo.png" alt="USAID Logo">
-                    <img src="images/global-fund-logo.png" alt="Global Fund Logo">
+                    <div class="partner-card" data-category="international">
+                        <div class="partner-logo">
+                            <img src="images/who-logo.png" alt="WHO Logo">
+                        </div>
+                        <div class="partner-info">
+                            <h3>Organisation Mondiale de la Santé</h3>
+                            <p>Leader mondial dans le domaine de la santé publique</p>
+                            <div class="partner-contribution">
+                                <span class="contribution-tag">Support Technique</span>
+                                <span class="contribution-tag">Formation</span>
+                            </div>
+                            <a href="https://www.who.int" class="partner-link" target="_blank">
+                                En savoir plus <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-category="international">
+                        <div class="partner-logo">
+                            <img src="images/unicef-logo.png" alt="UNICEF Logo">
+                        </div>
+                        <div class="partner-info">
+                            <h3>UNICEF</h3>
+                            <p>Protection des droits des enfants et des familles</p>
+                            <div class="partner-contribution">
+                                <span class="contribution-tag">Distribution</span>
+                                <span class="contribution-tag">Sensibilisation</span>
+                            </div>
+                            <a href="https://www.unicef.org" class="partner-link" target="_blank">
+                                En savoir plus <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-category="international">
+                        <div class="partner-logo">
+                            <img src="images/usaid-logo.png" alt="USAID Logo">
+                        </div>
+                        <div class="partner-info">
+                            <h3>USAID</h3>
+                            <p>Agence des États-Unis pour le développement international</p>
+                            <div class="partner-contribution">
+                                <span class="contribution-tag">Financement</span>
+                                <span class="contribution-tag">Équipement</span>
+                            </div>
+                            <a href="https://www.usaid.gov" class="partner-link" target="_blank">
+                                En savoir plus <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="partner-card" data-category="international">
+                        <div class="partner-logo">
+                            <img src="images/global-fund-logo.png" alt="Global Fund Logo">
+                        </div>
+                        <div class="partner-info">
+                            <h3>Fonds Mondial</h3>
+                            <p>Partenariat pour vaincre le paludisme, le VIH et la tuberculose</p>
+                            <div class="partner-contribution">
+                                <span class="contribution-tag">Financement</span>
+                                <span class="contribution-tag">Recherche</span>
+                            </div>
+                            <a href="https://www.theglobalfund.org" class="partner-link" target="_blank">
+                                En savoir plus <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partners-testimonial">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slide">
+                            <blockquote>
+                                "Notre partenariat avec le PNLP a permis de réduire significativement les cas de paludisme dans les zones rurales."
+                                <cite>- Dr. Sarah Johnson, OMS</cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-slide">
+                            <blockquote>
+                                "La collaboration entre nos organisations renforce la lutte contre le paludisme au Sénégal."
+                                <cite>- Jean Dupont, UNICEF</cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-navigation">
+                            <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -168,5 +304,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/partners.js"></script>
 </body>
 </html>
