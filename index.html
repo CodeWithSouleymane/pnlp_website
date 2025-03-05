@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PNLP - Programme National de Lutte contre le Paludisme</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
-                    <img src="images/logo-pnlp.png" alt="PNLP Logo">
+                    <img src="images/logo1.png" alt="PNLP Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="/">Accueil</a></li>
@@ -44,13 +45,21 @@
 
     <main>
         <section class="hero">
-            <div class="container">
+            <div class="hero-content">
                 <h1>Ensemble contre le Paludisme</h1>
                 <p>Programme National de Lutte contre le Paludisme au Sénégal</p>
                 <div class="hero-buttons">
                     <a href="/prevention" class="btn primary">Prévention</a>
                     <a href="/statistics" class="btn secondary">Statistiques</a>
                 </div>
+            </div>
+            <div class="hero-slider">
+                <div class="slide" style="background-image: url('images/slider/slider.jpg')"></div>
+                <div class="slide" style="background-image: url('images/slider/slider1.jpg')"></div>
+                <div class="slide" style="background-image: url('images/slider/slider2.jpg')"></div>
+                <div class="slider-nav"></div>
+                <div class="slider-arrow prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="slider-arrow next"><i class="fas fa-chevron-right"></i></div>
             </div>
         </section>
 
@@ -158,5 +167,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
